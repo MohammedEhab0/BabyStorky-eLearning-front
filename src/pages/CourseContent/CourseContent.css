@@ -1,0 +1,75 @@
+.course-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-video {
+  width: 65%;
+  margin: 0 auto; /* Center the main video horizontally */
+}
+
+.main-video video {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 5rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #333;
+}
+
+.video-playlist {
+  width: 65%;
+  margin: 0 auto; /* Center the playlist horizontally */
+}
+
+.playlist-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.playlist {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+.playlist li {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.playlist li:hover {
+  background-color: #f0f0f0;
+}
+
+.playlist li.active {
+  background-color: #f0f0f0;
+}
+
+.playlist li img {
+  width: 60px;
+  height: 40px;
+  margin-right: 1rem;
+}
+
+.video-info {
+  flex: 1;
+}
+
+.video-info h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.video-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #777;
+}
