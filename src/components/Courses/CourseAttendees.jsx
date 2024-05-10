@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Avatar from "../../images/avatar1.jpg";
+import Avatar from "../../images/instructor-2.png";
 import "./Courses.css";
 
 const CourseAttendees = () => {
   return (
-    <Link to={`/courses/users/attendees`} className="course__author">
+    <Link to={`/attendees`} className="course__author">
       <div className="course__author-avatar">
         <img src={Avatar} alt="" />
       </div>

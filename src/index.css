@@ -11,18 +11,19 @@
   --container-width-lg: 50%;
   --container-width-md: 50%;
   --form-width: 50%;
-  --radius-1: 0.3rem;
-  --radius-2: 0.6rem;
-  --radius-3: 1rem;
-  --radius-4: 2rem;
+  --radius-1: 0.3em;
+  --radius-2: 0.6em;
+  --radius-3: 1em;
+  --radius-4: 2em;
 }
 
 body {
   font-family: "Poppins", sans-serif;
   background: var(--color-bg);
-  font-size: 0.9rem;
+  font-size: medium;
   line-height: 1.6;
-  color: #050530;
+  color: #0e0e58;
+  width: auto;
 }
 
 a {
@@ -43,33 +44,27 @@ h6 {
   color: var(--color-gray-700);
   line-height: 1.1;
 }
-
-h1 {
-  font-size: 2.2rem;
-}
-h2 {
-  font-size: 1.9rem;
+img {
+  display: block;
 }
 
 h3 {
-  font-size: 1.3rem;
   line-height: 1.25;
 }
 h4 {
-  font-size: 1.1rem;
+  font-size: 1.1em;
 }
 h5 {
   line-height: 1.4;
 }
 
 img {
-  display: block;
   object-fit: cover;
   width: 100%;
 }
 
 section {
-  margin-top: 3rem;
+  margin-top: 3em;
 }
 
 * {
@@ -87,24 +82,26 @@ section {
 }
 
 .btn {
-  display: inline-block;
-  width: fit-content;
-  padding: 0.5rem 1rem;
+  display: block;
+  width: auto;
+  padding: 0rem 1rem;
   border-radius: var(--radius-2);
   background: var(--color-white);
-  font-weight: 500;
+  font-weight: 400;
   cursor: pointer;
   transition: var(--transition);
+  font-size: medium;
 }
 
 .btn.primary {
   background: #373396;
   color: var(--color-white);
+  font-size: medium;
+  text-align: center;
 }
 
 .btn.sm {
-  font-size: 0.8rem;
-  padding: 0.3rem 0.7rem;
+  padding: 0.3em 0.7em;
   font-weight: 400;
 }
 .btn.danger {
@@ -128,30 +125,30 @@ section {
   width: var(--form-width);
   background: var(--color-white);
   margin-inline: auto;
-  padding: 2rem 0;
+  padding: 2em 0;
 }
 
 .course-detail__header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5em;
 }
 
 .course-detail__buttons {
   display: flex;
-  gap: 1rem;
+  gap: 1em;
   align-items: center;
 }
 
 .course-detail__thumbnail {
-  margin: 1rem 0;
+  margin: 1em 0;
   height: fit-content;
   /* max-width: 30rem; */
   overflow: hidden;
 }
 
 .course-detail p {
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.7em;
 }
 
 /**************************Author************************/
@@ -164,79 +161,28 @@ section {
 .ql-editor {
   overflow: scroll;
   background: var(--color-white);
-  height: 10rem !important;
+  height: 12vh !important;
 }
 
 /*********responsive********/
 
 @media screen and (max-width: 700px) {
   h1 {
-    font-size: 2rem;
+    font-size: 2em;
   }
   h2 {
-    font-size: 1.6rem;
+    font-size: 1.6em;
   }
   h3 {
-    font-size: 1.35rem;
+    font-size: 1.35em;
   }
   .container {
     width: var(--container-width-md);
   }
 
-  .nav__container {
-    position: relative;
-  }
-  .nav__menu {
-    position: absolute;
-    top: 5rem;
-    right: 0;
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .nav__menu li {
-    width: 100%;
-    box-shadow: -2rem 4rem 4rem rgba(0, 0, 0, 0.26);
-    animation: dropDown 500ms ease forwards;
-    opacity: 0;
-    transform: rotateX(90deg);
-    transform-origin: top;
-  }
-
-  @keyframes dropDown {
-    to {
-      opacity: 1;
-      transform: rotateX(0);
-    }
-  }
-
-  .nav__menu li:nth-child(2) {
-    animation-delay: 300ms;
-  }
-
-  .nav__menu li:nth-child(3) {
-    animation-delay: 600ms;
-  }
-
-  .nav__menu li:nth-child(4) {
-    animation-delay: 900ms;
-  }
-
-  .nav__menu li a {
-    display: block;
-    background: var(--color-white);
-    padding: 0.85rem 2.5rem;
-  }
-  .nav__toggle-btn {
-    display: inline-block;
-    background: transparent;
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
-
   .course__container {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1em;
   }
 
   .course-detail {
@@ -250,13 +196,8 @@ section {
   }
 
   .form.profile__form {
-    margin-top: 2.5rem;
+    margin-top: 2.5em;
     width: 100%;
-  }
-
-  .authors__container {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
   }
 
   .dashboard__course {
@@ -264,14 +205,10 @@ section {
   }
 
   .dashboard__course-info {
-    gap: 1.5rem;
+    gap: 1.5em;
   }
 
   .dashboard__course-thumbnail {
-    width: 5rem;
+    width: 7vw;
   }
 }
-
-/**************************course-content************************/
-
-/**************************register************************/

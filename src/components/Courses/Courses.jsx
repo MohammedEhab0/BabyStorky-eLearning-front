@@ -23,7 +23,9 @@ const Courses = () => {
           ))}
         </div>
       ) : (
-        <h2 className="center">No Courses Founded</h2>
+        <>
+          <h2 className="center">No Courses Founded</h2>
+        </>
       )}
     </section>
   );

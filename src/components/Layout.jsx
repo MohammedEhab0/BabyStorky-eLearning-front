@@ -5,8 +5,8 @@ import Sidebar from "./Sidebar/Sidebar.jsx";
 const Layout = () => {
   return (
     <>
-      <Header />
       <Sidebar>
+        <Header />
         <Outlet />
       </Sidebar>
     </>

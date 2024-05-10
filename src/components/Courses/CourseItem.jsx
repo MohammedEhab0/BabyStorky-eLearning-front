@@ -10,12 +10,15 @@ const CourseItem = ({ courseID, thumbnail, title, desc, authorID }) => {
         <img src={thumbnail} alt={title} />
       </div>
       <div className="course__content">
-        <Link className="btn sm " to={`/courses/${courseID}`}>
+        <Link className="btn sm " to={`/courses/${courseID}/coursecontent`}>
           <h3>{title}</h3>
         </Link>
         <p>{desc}</p>
         <div className="course__footer">
-          <Link to={`/courses/${courseID}`} className="btn sm primary">
+          <Link
+            to={`/courses/${courseID}/coursecontent`}
+            className="btn sm primary"
+          >
             Content
           </Link>
           <CourseAttendees />

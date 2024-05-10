@@ -18,7 +18,10 @@ const Dashboard = () => {
                   <h5>{course.title}</h5>
                 </div>
                 <div className="dashboard__course-actions">
-                  <Link to={`/courses/${course.id}`} className="btn sm">
+                  <Link
+                    to={`/courses/${course.id}/coursecontent`}
+                    className="btn sm"
+                  >
                     View
                   </Link>
                   <Link

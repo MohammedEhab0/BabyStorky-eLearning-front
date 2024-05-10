@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { FaCheck, FaEdit } from "react-icons/fa";
-import Avatar from "../../images/avatar3.jpg";
+import { FaEdit } from "react-icons/fa";
+import Avatar from "../../images/instructor-2.png";
 import { Link } from "react-router-dom";
 import "./UserProfile.css";
 const UserProfile = () => {
@@ -33,22 +33,19 @@ const UserProfile = () => {
                   accept="png,jpg,jpeg"
                 />
                 <label htmlFor="avatar">
-                  <FaEdit />
+                  <FaEdit className="edit" />
                 </label>
               </form>
-              <button className="profile__avatar-btn">
-                <FaCheck />
-              </button>
             </div>
             <h1>Login</h1>
             {/*update user details*/}
             <form className="form profile__form">
-              <p className="form__error-message">This is an error message</p>
               <input
                 type="text"
                 placeholder="Full Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                className="full-name"
               />
               <input
                 type="email"
@@ -74,7 +71,7 @@ const UserProfile = () => {
                 value={confirmNewPassword}
                 onChange={(e) => setConfirmNewPassword(e.target.value)}
               />
-              <button type="submit" className="btn primary  prof">
+              <button type="submit" className="btn primary">
                 Update Details
               </button>
             </form>
