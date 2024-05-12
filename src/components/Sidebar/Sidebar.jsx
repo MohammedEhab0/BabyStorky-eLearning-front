@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { FaBook } from "react-icons/fa";
-import { ImBooks } from "react-icons/im";
 import { NavLink, Link } from "react-router-dom";
 import Logo from "../../images/storkyLogo.png";
 import { IoSettingsOutline } from "react-icons/io5";
@@ -14,18 +13,14 @@ import "./Sidebar.css";
 const Sidebar = ({ children }) => {
   const menuItem = [
     {
-      path: "mycourses/:id",
-
+      path: "/Home",
       icon: <MdOutlineDashboard className="icon" />,
     },
     {
       path: "courses/users/:id",
       icon: <FaBook className="icon" />,
     },
-    {
-      path: "/MediaLibrary",
-      icon: <ImBooks className="icon" />,
-    },
+
     {
       path: "profile/:id",
       icon: <IoSettingsOutline className="icon" />,

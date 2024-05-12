@@ -78,8 +78,23 @@ option {
   border-radius: 15px;
   padding: 0.5rem;
 }
-.financial-reports {
+.upload-photo {
   border: #623cc9 solid 1px;
   border-radius: 20px;
   padding: 0.5rem;
+  margin-top: 2rem;
+}
+input[type="file"] {
+  font-size: medium;
+  font-weight: bolder;
+}
+.btn-submite {
+  font-size: larger;
+  padding: 0.5rem;
+  background: #373396;
+  color: var(--color-white);
+}
+.btn-submite:hover {
+  background: #8c84fa;
+  color: var(--color-white);
 }

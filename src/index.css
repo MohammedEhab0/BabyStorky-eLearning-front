@@ -199,16 +199,16 @@ section {
     margin-top: 2.5em;
     width: 100%;
   }
-
-  .dashboard__course {
-    flex-direction: column;
-  }
-
-  .dashboard__course-info {
-    gap: 1.5em;
-  }
-
-  .dashboard__course-thumbnail {
-    width: 7vw;
-  }
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  background-image: url("/src/images/background-3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  filter: saturate(70%);
 }

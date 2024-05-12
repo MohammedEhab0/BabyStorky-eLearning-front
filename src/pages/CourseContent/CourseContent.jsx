@@ -3,10 +3,12 @@ import VideoImg from "../../images/background-2.jpg";
 import { DUMMY_COURSES_VIDEOS } from "../../data";
 import "./CourseContent.css";
 import ReactPlayer from "react-player";
-import InviteLogo from "../../images/add-user.png";
-import SessionLogo from "../../images/webinars.png";
-import { Link } from "react-router-dom";
+import { RiDeleteBin6Fill } from "react-icons/ri";
 import { FaEdit } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { RiFileAddLine } from "react-icons/ri";
+import { IoPersonAdd } from "react-icons/io5";
+
 const CourseContent = () => {
   const [mainVideo, setMainVideo] = useState(DUMMY_COURSES_VIDEOS[7]);
 
@@ -21,7 +23,7 @@ const CourseContent = () => {
           <ReactPlayer
             controls={true}
             url={`${mainVideo.video}`}
-            className="main-video video"
+            className="video"
             muted={false}
             width="700px"
             height="500px"
@@ -31,21 +33,18 @@ const CourseContent = () => {
 
         <div className="big-container">
           <div className="icon-container">
-            <button>
-              <Link to={"/InviteUser"}>
-                <img src={InviteLogo} />
-              </Link>
-            </button>
-            <button>
-              <Link to={"courses/:id/edit"}>
-                <FaEdit className="edit" />
-              </Link>
-            </button>
-            <button>
-              <Link to={"/CreatSession"}>
-                <img className="img-content" src={SessionLogo} />
-              </Link>
-            </button>
+            <Link to={"DeleteSession"} className="btn sm primary">
+              <RiDeleteBin6Fill />
+            </Link>
+            <Link to={"editsession"} className="btn sm primary">
+              <FaEdit />
+            </Link>
+            <Link to={"CreatSession"} className="btn sm primary">
+              <RiFileAddLine />
+            </Link>
+            <Link to={"/InviteUser"} className="btn sm primary">
+              <IoPersonAdd />
+            </Link>
           </div>
           <section className="video-playlist">
             <h3 className="playlist-title">Video Playlist</h3>

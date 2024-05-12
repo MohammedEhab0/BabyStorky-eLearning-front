@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { BsCloudUpload } from "react-icons/bs";
-import "./CreatSession.css";
+import "./Session.css";
 const CreatSession = () => {
   const [title, setTitle] = useState("");
   const [descreption, setDescreption] = useState("");
-  const [thumbnail, setThumbnail] = useState("");
+  const [EndingDate, setEndingDate] = useState("");
+  const [startingDate, setStartingDate] = useState("");
+  const [EndingTime, setEndingTime] = useState("");
+  const [startingTime, setStartingTime] = useState("");
 
   const modules = {
     toolbar: [
@@ -75,11 +78,21 @@ const CreatSession = () => {
           <div className="time">
             <div>
               <label for="date">Date</label>
-              <input type="date" id="date" required />
+              <input
+                type="date"
+                value={startingDate}
+                onChange={(event) => setStartingDate(event.target.value)}
+              />
             </div>
             <div>
               <label for="time">Time</label>
-              <input type="time" id="time" required />
+              <input
+                type="time"
+                id="time"
+                required
+                value={startingTime}
+                onChange={(event) => setStartingTime(event.target.value)}
+              />
             </div>
           </div>
           <div className="checkbox">
@@ -89,12 +102,22 @@ const CreatSession = () => {
           <div className="time">
             <div>
               <label for="date">Expire Date</label>
-              <input type="date" id="date" required />
+              <input
+                type="date"
+                value={EndingDate}
+                onChange={(event) => setEndingDate(event.target.value)}
+              />
             </div>
 
             <div>
               <label for="time">Expire Time</label>
-              <input type="time" id="time" required />
+              <input
+                type="time"
+                id="time"
+                required
+                value={EndingTime}
+                onChange={(event) => setEndingTime(event.target.value)}
+              />
             </div>
           </div>
 

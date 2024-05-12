@@ -1,0 +1,43 @@
+.invite-box {
+  margin-top: 5em;
+  margin: auto;
+  border: #6d64e8 solid 0.16em;
+  max-width: 85%;
+  border-radius: 10px;
+  padding: 0.5rem;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2.5rem;
+}
+.enter-email {
+  border-radius: 10px;
+  border: #514ba8 0.16em solid;
+  margin-right: 0;
+  margin-left: 1rem;
+  width: 80%;
+  text-align: center;
+}
+.invite-bar {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  align-items: center;
+  background-color: #bebbee;
+  flex-wrap: wrap;
+  border-radius: 10px;
+}
+.li-invited {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border-radius: 10px;
+}
+.invited-list {
+  margin-top: 1rem;
+}
+.li-invited:hover {
+  background-color: #bebbee;
+  border-radius: 5px;
+}

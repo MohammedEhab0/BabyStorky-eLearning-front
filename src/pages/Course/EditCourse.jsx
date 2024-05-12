@@ -1,20 +1,23 @@
 import React, { useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
-import "./CreatCourse.css";
-const CreateCourse = () => {
+
+const EditCourse = () => {
   const [title, setTitle] = useState("");
   const [descreption, setDescreption] = useState("Uncategorized");
-  const [financialReports, setFinancialReports] = useState("");
   const [courseDuration, setCourseDuration] = useState(0);
   const [startingDate, setStartingDate] = useState("");
 
   const [selectedLabel, setSelectedLabel] = useState("Label1");
-
+  const [photo, setPhoto] = useState(null);
   const courseLabels = ["Label1", "Label2", "Label3"];
 
   const handleLabelChange = (event) => {
     setSelectedLabel(event.target.value);
+  };
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    setPhoto(file);
   };
 
   const getLabelColor = (label) => {
@@ -27,13 +30,6 @@ const CreateCourse = () => {
         return "green";
       default:
         return "black";
-    }
-  };
-  const handleFinancialReportsChange = (event) => {
-    if (event.target.value === "None") {
-      setFinancialReports("");
-    } else {
-      setFinancialReports(event.target.value);
     }
   };
 
@@ -68,7 +64,7 @@ const CreateCourse = () => {
 
   return (
     <div className="create-course">
-      <h2>Create Course</h2>
+      <h2>Edit Course</h2>
       <form className="form create-course__form">
         <label>course Name:</label>
         <input
@@ -77,7 +73,6 @@ const CreateCourse = () => {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           autoFocus
-          className="text"
         />
         <label>Course Descrption:</label>
         <ReactQuill
@@ -87,19 +82,6 @@ const CreateCourse = () => {
           onChange={setDescreption}
         />
 
-        <label>
-          Financial Reports:
-          <select
-            className="financial-reports"
-            value={financialReports || "None"}
-            onChange={handleFinancialReportsChange}
-          >
-            <option value="None">None</option>
-            <option value="Financial Report 1">Financial Report 1</option>
-            <option value="Financial Report 2">Financial Report 2</option>
-          </select>
-        </label>
-        <br />
         <div className="inline-label">
           <label>
             Course Duration (In Days):
@@ -135,13 +117,18 @@ const CreateCourse = () => {
             ))}
           </select>
         </div>
+
+        <div className="upload-photo">
+          <label>Upload Photo:</label>
+          <input type="file" accept="image/*" onChange={handleFileChange} />
+        </div>
         <br />
-        <button className="btn primary" type="submit">
-          Create
+        <button type="submit" className="btn-submite">
+          Save
         </button>
       </form>
     </div>
   );
 };
 
-export default CreateCourse;
+export default EditCourse;
